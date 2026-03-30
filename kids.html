@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kids's Collection — Shop Spade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Raleway:wght@200;300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Kids page — keep dark theme but add a touch of playful without JS */
+    .kids-age-filter {
+      padding: 2rem 5% 0;
+      background: var(--black);
+    }
+
+    .kids-age-filter-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .age-chip {
+      padding: 0.45rem 1.4rem;
+      border: 1px solid rgba(192, 24, 42, 0.3);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--grey-light);
+      cursor: pointer;
+      transition: all var(--transition);
+      border-radius: 1px;
+    }
+
+    .age-chip:hover {
+      background: var(--red);
+      border-color: var(--red);
+      color: var(--white);
+    }
+
+    /* Product grid 4 col with slightly shorter image for kids */
+    .kids-grid .product-img-wrap {
+      height: 260px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-symbol">♠</span>
+        <span class="logo-text">Shop <span>Spade</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="mens.html">Men</a>
+        <a href="womens.html">Women</a>
+        <a href="kids.html" class="active">Kids</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="nav-sections">
+        <a href="mens.html">Men's</a>
+        <a href="womens.html">Women's</a>
+        <a href="kids.html" class="active">Kids's</a>
+      </div>
+      <label for="nav-toggle" class="hamburger">
+        <span></span><span></span><span></span>
+      </label>
+    </div>
+  </header>
+
+  <!-- Section Hero -->
+  <section class="section-hero">
+    <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=1600&q=80" alt="Kids's Collection" />
+    <div class="section-hero-content">
+      <p class="section-hero-label">Spring / Summer 2025</p>
+      <h1 class="section-hero-title">Kids's<br />Collection</h1>
+      <p class="section-hero-sub">Clothing · Accessories · Bags · School Essentials · Perfumes · Footwear</p>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>Kids New Arrivals — Boys & Girls</span><span class="sep"> ♠ </span>
+      <span>Sizes 2Y to 14Y Available</span><span class="sep"> ♠ </span>
+      <span>School Bags · Backpacks · Accessories</span><span class="sep"> ♠ </span>
+      <span>Soft Fragrances for Kids</span><span class="sep"> ♠ </span>
+      <span>Kids New Arrivals — Boys & Girls</span><span class="sep"> ♠ </span>
+      <span>Sizes 2Y to 14Y Available</span><span class="sep"> ♠ </span>
+      <span>School Bags · Backpacks · Accessories</span><span class="sep"> ♠ </span>
+      <span>Soft Fragrances for Kids</span><span class="sep"> ♠ </span>
+    </div>
+  </div>
+
+  <!-- Age Filter Chips -->
+  <div class="kids-age-filter">
+    <div class="kids-age-filter-inner">
+      <span
+        style="font-size:0.6rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--grey);align-self:center;">Shop
+        by Age:</span>
+      <span class="age-chip">2-4 Years</span>
+      <span class="age-chip">4-6 Years</span>
+      <span class="age-chip">6-8 Years</span>
+      <span class="age-chip">8-10 Years</span>
+      <span class="age-chip">10-12 Years</span>
+      <span class="age-chip">12-14 Years</span>
+    </div>
+  </div>
+
+  <!-- Category Tabs -->
+  <input type="radio" id="cat-all" name="kids-cat" class="cat-radio" checked />
+  <input type="radio" id="cat-cloth" name="kids-cat" class="cat-radio" />
+  <input type="radio" id="cat-acc" name="kids-cat" class="cat-radio" />
+  <input type="radio" id="cat-bag" name="kids-cat" class="cat-radio" />
+  <input type="radio" id="cat-perf" name="kids-cat" class="cat-radio" />
+
+  <div class="cat-tabs">
+    <div class="cat-tabs-inner">
+      <label class="cat-label" for="cat-all">All Products</label>
+      <label class="cat-label" for="cat-cloth">Clothing</label>
+      <label class="cat-label" for="cat-acc">Accessories</label>
+      <label class="cat-label" for="cat-bag">Bags & Essentials</label>
+      <label class="cat-label" for="cat-perf">Fragrances</label>
+    </div>
+  </div>
+
+  <!-- All Products -->
+  <section class="cat-section">
+    <div class="cat-section-inner">
+
+      <!-- Clothing — Boys -->
+      <h2 class="cat-group-title">Boys' Clothing <span>♠ Shirts · Jeans · Jackets · Ethnic · Casual Sets</span></h2>
+      <div class="product-grid kids-grid" style="margin-bottom:4rem;">
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Mini-Explorer-Jacket.jpg" alt="Boys Jacket" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Boys · Jacket</p>
+            <h3 class="product-name">Mini Explorer Jacket</h3>
+            <div class="product-pricing"><span class="product-price">₹3,400</span><span
+                class="product-price-old">₹4,800</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Oxford-Button-Down-Shirt.jpg" alt="Boys Shirt" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Boys · Shirt</p>
+            <h3 class="product-name">Oxford Button-Down Shirt</h3>
+            <div class="product-pricing"><span class="product-price">₹1,200</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Slim-Fit-Denim-Jeans.jpg" alt="Boys Jeans" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-sale">Sale</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Boys · Jeans</p>
+            <h3 class="product-name">Slim Fit Denim Jeans</h3>
+            <div class="product-pricing"><span class="product-price">₹1,600</span><span
+                class="product-price-old">₹2,400</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Festive-Kurta-Pyjama-Set.jpg" alt="Boys Kurta" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Boys · Ethnic</p>
+            <h3 class="product-name">Festive Kurta Pyjama Set</h3>
+            <div class="product-pricing"><span class="product-price">₹2,200</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Printed-T-Shirt-Shorts Set.jpg" alt="Boys Casual Set" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Boys · Casual Set</p>
+            <h3 class="product-name">Printed T-Shirt + Shorts Set</h3>
+            <div class="product-pricing"><span class="product-price">₹1,400</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Fleece-Lined-Hoodie.jpg" alt="Boys Winter" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-limit">Limited</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Boys · Outerwear</p>
+            <h3 class="product-name">Fleece-Lined Hoodie</h3>
+            <div class="product-pricing"><span class="product-price">₹2,800</span><span
+                class="product-price-old">₹3,900</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Mini-Gentleman's-Suit.jpg" alt="Boys Suit" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Boys · Formal</p>
+            <h3 class="product-name">Mini Gentleman's Suit</h3>
+            <div class="product-pricing"><span class="product-price">₹4,500</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Graphic-Sweatshirt.jpg" alt="Boys Sweatshirt" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Boys · Casual</p>
+            <h3 class="product-name">Graphic Sweatshirt</h3>
+            <div class="product-pricing"><span class="product-price">₹1,800</span></div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Clothing — Girls -->
+      <h2 class="cat-group-title">Girls' Clothing <span>♠ Frocks · Dresses · Lehengas · Co-ords · Tops · Jackets</span>
+      </h2>
+      <div class="product-grid kids-grid" style="margin-bottom:4rem;">
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Floral-Ruffle-Frock.jpg" alt="Girls Frock" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Girls · Dress</p>
+            <h3 class="product-name">Floral Ruffle Frock</h3>
+            <div class="product-pricing"><span class="product-price">₹1,800</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Festive-Lehenga-Set.jpg" alt="Girls Lehenga" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-limit">Limited</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Girls · Ethnic</p>
+            <h3 class="product-name">Festive Lehenga Set</h3>
+            <div class="product-pricing"><span class="product-price">₹3,600</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Printed-Co-ord-Set.jpg" alt="Girls Co-ord" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Girls · Co-ord Set</p>
+            <h3 class="product-name">Printed Co-ord Set</h3>
+            <div class="product-pricing"><span class="product-price">₹2,100</span><span
+                class="product-price-old">₹2,900</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Quilted-Pastel-Jacket.jpg" alt="Girls Jacket" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-sale">Sale</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Girls · Outerwear</p>
+            <h3 class="product-name">Quilted Pastel Jacket</h3>
+            <div class="product-pricing"><span class="product-price">₹2,400</span><span
+                class="product-price-old">₹3,500</span></div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Accessories -->
+      <h2 class="cat-group-title">Accessories <span>♠ Hats · Sunglasses · Belts · Hair Accessories · Socks ·
+          Watches</span></h2>
+      <div class="product-grid kids-grid" style="margin-bottom:4rem;">
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Adjustable-Baseball-Cap.jpg" alt="Kids Cap" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Accessories · Cap</p>
+            <h3 class="product-name">Adjustable Baseball Cap</h3>
+            <div class="product-pricing"><span class="product-price">₹800</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/UV-Protection-Sunglasses.jpg" alt="Kids Sunglasses" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Accessories · Eyewear</p>
+            <h3 class="product-name">UV-Protection Sunglasses</h3>
+            <div class="product-pricing"><span class="product-price">₹1,200</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Kids-Digital-Sports-Watch.jpg" alt="Kids Watch" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Accessories · Watch</p>
+            <h3 class="product-name">Kids Digital Sports Watch</h3>
+            <div class="product-pricing"><span class="product-price">₹2,400</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Girls-Hair-Accessory-Set.jpg" alt="Hair Accessories" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Accessories · Hair</p>
+            <h3 class="product-name">Girls Hair Accessory Set</h3>
+            <div class="product-pricing"><span class="product-price">₹650</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Canvas-Webbing-Belt.jpg" alt="Kids Belt" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Accessories · Belt</p>
+            <h3 class="product-name">Canvas Webbing Belt</h3>
+            <div class="product-pricing"><span class="product-price">₹550</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Knit-Muffler-Scarf.jpg" alt="Kids Scarf" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Accessories · Scarf</p>
+            <h3 class="product-name">Knit Muffler Scarf</h3>
+            <div class="product-pricing"><span class="product-price">₹780</span></div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Bags & School Essentials -->
+      <h2 class="cat-group-title">Bags & School Essentials <span>♠ Backpacks · Lunch Bags · Pouches · Mini Bags ·
+          Trolley Bags</span></h2>
+      <div class="product-grid kids-grid" style="margin-bottom:4rem;">
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Ergonomic-School-Backpack.jpg" alt="School Backpack" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Bag · School Backpack</p>
+            <h3 class="product-name">Ergonomic School Backpack</h3>
+            <div class="product-pricing"><span class="product-price">₹2,800</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Dino-Trolley-School-Bag.jpg" alt="Trolley Bag" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-sale">Sale</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Bag · Trolley</p>
+            <h3 class="product-name">Dino Trolley School Bag</h3>
+            <div class="product-pricing"><span class="product-price">₹3,200</span><span
+                class="product-price-old">₹4,500</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Insulated-Lunch-Bag.jpg" alt="Lunch Bag" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Bag · Lunch Bag</p>
+            <h3 class="product-name">Insulated Lunch Bag</h3>
+            <div class="product-pricing"><span class="product-price">₹850</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Girls-Mini-Crossbody-Bag.jpg" alt="Mini Bag" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Bag · Mini</p>
+            <h3 class="product-name">Girls Mini Crossbody Bag</h3>
+            <div class="product-pricing"><span class="product-price">₹1,400</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Pencil-Pouch.jpg" alt="Pencil Pouch" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Essentials · Pouch</p>
+            <h3 class="product-name">Zip Pencil & Stationery Pouch</h3>
+            <div class="product-pricing"><span class="product-price">₹450</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Boys-Sling-Bag.jpg" alt="Boys Bag" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Bag · Casual</p>
+            <h3 class="product-name">Boys Sling Bag</h3>
+            <div class="product-pricing"><span class="product-price">₹1,100</span></div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Fragrances -->
+      <h2 class="cat-group-title">Fragrances <span>♠ Soft Perfumes · Body Mists · Talcum · Gift Sets</span></h2>
+      <div class="product-grid kids-grid">
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Kids-Perfume.jpg" alt="Kids Perfume" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Fragrance · Kids EDP</p>
+            <h3 class="product-name">Bubblegum Bliss Perfume</h3>
+            <div class="product-pricing"><span class="product-price">₹1,200</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Body-Mist.jpg" alt="Body Mist" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Fragrance · Body Mist</p>
+            <h3 class="product-name">Strawberry Body Mist 150ml</h3>
+            <div class="product-pricing"><span class="product-price">₹680</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Kids-Gift-Set.jpg" alt="Gift Set" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-limit">Limited</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Fragrance · Gift Set</p>
+            <h3 class="product-name">Kids Fragrance Gift Box</h3>
+            <div class="product-pricing"><span class="product-price">₹2,400</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Talcum.jpg" alt="Talcum" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Fragrance · Powder</p>
+            <h3 class="product-name">Baby Soft Talcum Set</h3>
+            <div class="product-pricing"><span class="product-price">₹480</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Banner -->
+  <div class="featured-banner">
+    <img src="assets/Featured-Banner.jpg" alt="Kids Sale" />
+    <div class="featured-banner-content">
+      <p class="featured-banner-eyebrow">Back to School</p>
+      <h2 class="featured-banner-title">School Bags Up To <em>35% Off</em></h2>
+      <p class="featured-banner-sub">Get your little ones ready for school with our premium bag collection at special
+        prices.</p>
+      <a href="#" class="btn-primary">Shop School Bags</a>
+    </div>
+  </div>
+
+  <!-- Size Guide -->
+  <section style="padding:5rem 5%;background:var(--black-soft);">
+    <div class="section-header">
+      <span class="section-label">For Parents</span>
+      <h2 class="section-title">Kids's <em>Size Guide</em></h2>
+      <div class="title-rule"><span></span><span class="ri">♠</span><span></span></div>
+    </div>
+    <div style="max-width:900px;margin:0 auto;overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+        <thead>
+          <tr style="background:var(--red);color:var(--white);">
+            <th
+              style="padding:1rem;text-align:left;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;font-size:0.62rem;">
+              Age</th>
+            <th
+              style="padding:1rem;text-align:center;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;font-size:0.62rem;">
+              Height (cm)</th>
+            <th
+              style="padding:1rem;text-align:center;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;font-size:0.62rem;">
+              Chest (cm)</th>
+            <th
+              style="padding:1rem;text-align:center;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;font-size:0.62rem;">
+              Waist (cm)</th>
+            <th
+              style="padding:1rem;text-align:center;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;font-size:0.62rem;">
+              Size Label</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:0.9rem 1rem;color:var(--ivory);">2-4 Years</td>
+            <td style="padding:0.9rem 1rem;color:var(--grey-light);text-align:center;">86-104</td>
+            <td style="padding:0.9rem 1rem;color:var(--grey-light);text-align:center;">52-56</td>
+            <td style="padding:0.9rem 1rem;color:var(--grey-light);text-align:center;">48-52</td>
+            <td style="padding:0.9rem 1rem;color:var(--red-light);text-align:center;font-weight:700;">2Y / 3Y / 4Y</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);background:rgba(255,255,255,0.02);">
+            <td style="padding:0.9rem 1rem;color:var(--ivory);">4-6 Years</td>
+            <td style="padding:0.9rem 1rem;color:var(--grey-light);text-align:center;">104-116</td>
+            <td style="padding:0.9rem 1rem;color:var(--grey-light);text-align:center;">56-60</td>
+            <td style="padding:0.9rem 1rem;color:var(--grey-light);text-align:center;">52-56</td>
+            <td style="padding:0.9rem 1rem;color:var(--red-light);text-align:center;font-weight:700;">5Y / 6Y</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:0.9rem 1rem;color:var(--ivory);">6-8 Years</td>
+            <td style="padding:0.9rem 1rem;color:var(--grey-light);text-align:center;">116-128</td>
+            <td style="padding:0.9rem 1rem;color:var(--grey-light);text-align:center;">60-64</td>
+            <td style="padding:0.9rem 1rem;color:var(--grey-light);text-align:center;">56-60</td>
+            <td style="padding:0.9rem 1rem;color:var(--red-light);text-align:center;font-weight:700;">7Y / 8Y</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);background:rgba(255,255,255,0.02);">
+            <td style="padding:0.9rem 1rem;color:var(--ivory);">8-10 Years</td>
+            <td style="padding:0.9rem 1rem;color:var(--grey-light);text-align:center;">128-140</td>
+            <td style="padding:0.9rem 1rem;color:var(--grey-light);text-align:center;">64-70</td>
+            <td style="padding:0.9rem 1rem;color:var(--grey-light);text-align:center;">60-64</td>
+            <td style="padding:0.9rem 1rem;color:var(--red-light);text-align:center;font-weight:700;">9Y / 10Y</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:0.9rem 1rem;color:var(--ivory);">10-12 Years</td>
+            <td style="padding:0.9rem 1rem;color:var(--grey-light);text-align:center;">140-152</td>
+            <td style="padding:0.9rem 1rem;color:var(--grey-light);text-align:center;">70-76</td>
+            <td style="padding:0.9rem 1rem;color:var(--grey-light);text-align:center;">64-68</td>
+            <td style="padding:0.9rem 1rem;color:var(--red-light);text-align:center;font-weight:700;">11Y / 12Y</td>
+          </tr>
+          <tr>
+            <td style="padding:0.9rem 1rem;color:var(--ivory);">12-14 Years</td>
+            <td style="padding:0.9rem 1rem;color:var(--grey-light);text-align:center;">152-164</td>
+            <td style="padding:0.9rem 1rem;color:var(--grey-light);text-align:center;">76-82</td>
+            <td style="padding:0.9rem 1rem;color:var(--grey-light);text-align:center;">68-72</td>
+            <td style="padding:0.9rem 1rem;color:var(--red-light);text-align:center;font-weight:700;">13Y / 14Y</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <p class="featured-banner-eyebrow">For Parents</p>
+    <h2 class="newsletter-title">Get Kids's <em>Style</em> Updates</h2>
+    <p class="newsletter-sub">Be the first to know about new Kids's arrivals, school season deals, and exclusive
+      discounts.</p>
+    <form class="newsletter-form" action="#" method="post">
+      <input type="email" placeholder="Enter your email" />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand footer-col">
+        <a href="index.html" class="logo"><span class="logo-symbol">♠</span><span class="logo-text">Shop
+            <span>Spade</span></span></a>
+        <p class="footer-tagline">Premium fashion for men, women, and children. Quality that speaks, style that lasts.
+        </p>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="5" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg></a>
+          <a href="#" class="social-icon" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg></a>
+          <a href="#" class="social-icon" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58a2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+              <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Kids's Shop</h4>
+        <ul>
+          <li><a href="#">Boys' Clothing</a></li>
+          <li><a href="#">Girls' Clothing</a></li>
+          <li><a href="#">School Bags</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Fragrances</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="mens.html">Men's</a></li>
+          <li><a href="womens.html">Women's</a></li>
+          <li><a href="kids.html">Kids's</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Sale</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Shop Spade. All rights reserved.</p>
+      <p>Designed with ♠ in Chandigarh, India</p>
+      <p><a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

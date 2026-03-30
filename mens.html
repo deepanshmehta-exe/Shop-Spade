@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Men's Collection — Shop Spade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Raleway:wght@200;300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-symbol">♠</span>
+        <span class="logo-text">Shop <span>Spade</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="mens.html" class="active">Men</a>
+        <a href="womens.html">Women</a>
+        <a href="kids.html">Kids</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="nav-sections">
+        <a href="mens.html" class="active">Men's</a>
+        <a href="womens.html">Women's</a>
+        <a href="kids.html">Kids'</a>
+      </div>
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+    </div>
+  </header>
+
+  <!-- Section Hero -->
+  <section class="section-hero">
+    <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=1600&q=80" alt="Men's Collection" />
+    <div class="section-hero-content">
+      <p class="section-hero-label">Spring / Summer 2025</p>
+      <h1 class="section-hero-title">Men's<br />Collection</h1>
+      <p class="section-hero-sub">Clothing · Accessories · Wallets · Bags · Perfumes · Footwear</p>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>Men's New Arrivals Are Here</span><span class="sep"> ♠ </span>
+      <span>Free Shipping Above ₹3,000</span><span class="sep"> ♠ </span>
+      <span>Premium Suits · Shirts · Jackets</span><span class="sep"> ♠ </span>
+      <span>Exclusive Fragrances for Him</span><span class="sep"> ♠ </span>
+      <span>Men's New Arrivals Are Here</span><span class="sep"> ♠ </span>
+      <span>Free Shipping Above ₹3,000</span><span class="sep"> ♠ </span>
+      <span>Premium Suits · Shirts · Jackets</span><span class="sep"> ♠ </span>
+      <span>Exclusive Fragrances for Him</span><span class="sep"> ♠ </span>
+    </div>
+  </div>
+
+  <input type="radio" id="cat-all" name="mens-cat" class="cat-radio" checked />
+  <input type="radio" id="cat-cloth" name="mens-cat" class="cat-radio" />
+  <input type="radio" id="cat-acc" name="mens-cat" class="cat-radio" />
+  <input type="radio" id="cat-bag" name="mens-cat" class="cat-radio" />
+  <input type="radio" id="cat-perf" name="mens-cat" class="cat-radio" />
+
+  <div class="cat-tabs">
+    <div class="cat-tabs-inner">
+      <label class="cat-label" for="cat-all">All Products</label>
+      <label class="cat-label" for="cat-cloth">Clothing</label>
+      <label class="cat-label" for="cat-acc">Accessories &amp; Wallets</label>
+      <label class="cat-label" for="cat-bag">Bags</label>
+      <label class="cat-label" for="cat-perf">Perfumes</label>
+    </div>
+  </div>
+
+  <!-- All Products -->
+  <section class="cat-section">
+    <div class="cat-section-inner">
+
+      <!-- Clothing -->
+      <h2 class="cat-group-title">Clothing <span>♠ Shirts · Suits · Jackets · Trousers · Casuals</span></h2>
+      <div class="product-grid" style="margin-bottom:4rem;">
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Obsidian-Slim-Suit.jpg" alt="Slim Fit Suit" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Clothing · Suit</p>
+            <h3 class="product-name">Obsidian Slim Suit</h3>
+            <div class="product-pricing"><span class="product-price">₹12,500</span><span
+                class="product-price-old">₹18,000</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Royal-Oxford-Shirt.jpeg" alt="Oxford Shirt" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Clothing · Shirt</p>
+            <h3 class="product-name">Royal Oxford Shirt</h3>
+            <div class="product-pricing"><span class="product-price">₹3,200</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Midnight-Leather-Jacket.jpg" alt="Leather Jacket" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-sale">Sale</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Clothing · Jacket</p>
+            <h3 class="product-name">Midnight Leather Jacket</h3>
+            <div class="product-pricing"><span class="product-price">₹8,900</span><span
+                class="product-price-old">₹13,500</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Classic-Slim-Chinos.jpg" alt="Slim Chinos" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Clothing · Trousers</p>
+            <h3 class="product-name">Classic Slim Chinos</h3>
+            <div class="product-pricing"><span class="product-price">₹2,800</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Pima-Cotton-Crew-Tee.jpg" alt="Premium T-shirt" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Clothing · Casual</p>
+            <h3 class="product-name">Pima Cotton Crew Tee</h3>
+            <div class="product-pricing"><span class="product-price">₹1,400</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Wool-Overcoat.jpg" alt="Winter Coat" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Clothing · Outerwear</p>
+            <h3 class="product-name">Wool Overcoat</h3>
+            <div class="product-pricing"><span class="product-price">₹14,500</span><span
+                class="product-price-old">₹20,000</span></div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Accessories & Wallets -->
+      <h2 class="cat-group-title">Accessories &amp; Wallets <span>♠ Belts · Ties · Sunglasses · Cufflinks ·
+          Wallets</span></h2>
+      <div class="product-grid" style="margin-bottom:4rem;">
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Slim-Leather-Bifold-Wallet.jpg" alt="Leather Wallet" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Accessory · Wallet</p>
+            <h3 class="product-name">Slim Leather Bifold Wallet</h3>
+            <div class="product-pricing"><span class="product-price">₹2,400</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Aviator-Sunglasses.jpg" alt="Sunglasses" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Accessory · Eyewear</p>
+            <h3 class="product-name">Aviator Sunglasses</h3>
+            <div class="product-pricing"><span class="product-price">₹3,800</span><span
+                class="product-price-old">₹5,500</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Full-Grain-Leather-Belt.jpg" alt="Leather Belt" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Accessory · Belt</p>
+            <h3 class="product-name">Full-Grain Leather Belt</h3>
+            <div class="product-pricing"><span class="product-price">₹1,900</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Silk-Paisley-Tie.jpg" alt="Tie" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-limit">Limited</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Accessory · Tie</p>
+            <h3 class="product-name">Silk Paisley Tie</h3>
+            <div class="product-pricing"><span class="product-price">₹2,200</span></div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Bags -->
+      <h2 class="cat-group-title">Bags <span>♠ Briefcases · Backpacks · Duffels · Messengers</span></h2>
+      <div class="product-grid" style="margin-bottom:4rem;">
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Executive-Leather-Briefcase.jpg" alt="Briefcase" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Bag · Briefcase</p>
+            <h3 class="product-name">Executive Leather Briefcase</h3>
+            <div class="product-pricing"><span class="product-price">₹11,200</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Urban-Commuter-Backpack.jpg" alt="Backpack" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Bag · Backpack</p>
+            <h3 class="product-name">Urban Commuter Backpack</h3>
+            <div class="product-pricing"><span class="product-price">₹6,800</span><span
+                class="product-price-old">₹9,500</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Weekend-Duffel-Bag.jpg" alt="Duffel Bag" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-sale">Sale</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Bag · Duffel</p>
+            <h3 class="product-name">Weekend Duffel Bag</h3>
+            <div class="product-pricing"><span class="product-price">₹8,400</span><span
+                class="product-price-old">₹12,000</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Canvas-Messenger-Bag.jpg" alt="Messenger Bag" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Bag · Messenger</p>
+            <h3 class="product-name">Canvas Messenger Bag</h3>
+            <div class="product-pricing"><span class="product-price">₹5,200</span></div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Perfumes -->
+      <h2 class="cat-group-title">Perfumes <span>♠ Eau de Parfum · Cologne · Deodorants</span></h2>
+      <div class="product-grid">
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Noir-Oud-Elixir.jpg" alt="Perfume" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-limit">Limited</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Fragrance · EDP</p>
+            <h3 class="product-name">Noir Oud Elixir</h3>
+            <div class="product-pricing"><span class="product-price">₹7,800</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Cedar-&-Bergamot-Cologne.jpg" alt="Cologne" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+            <span class="product-badge badge-new">New</span>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Fragrance · Cologne</p>
+            <h3 class="product-name">Cedar &amp; Bergamot Cologne</h3>
+            <div class="product-pricing"><span class="product-price">₹5,400</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Oceanic-Aqua-Eau-de-Toilette.jpg" alt="Aqua Perfume" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Fragrance · Aqua</p>
+            <h3 class="product-name">Oceanic Aqua Eau de Toilette</h3>
+            <div class="product-pricing"><span class="product-price">₹4,200</span><span
+                class="product-price-old">₹6,000</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/Black-Edition-Deodorant-Set.jpg" alt="Premium Deodorant" />
+            <div class="product-overlay"><button class="btn-overlay">Add to Cart</button></div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Fragrance · Deo</p>
+            <h3 class="product-name">Black Edition Deodorant Set</h3>
+            <div class="product-pricing"><span class="product-price">₹1,800</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Banner -->
+  <div class="featured-banner">
+    <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=1600&q=80" alt="Men's Collection" />
+    <div class="featured-banner-content">
+      <p class="featured-banner-eyebrow">Exclusive Offer</p>
+      <h2 class="featured-banner-title">Buy 2 Shirts, Get <em>1 Free</em></h2>
+      <p class="featured-banner-sub">Mix and match from our premium shirt collection. Limited period offer.</p>
+      <a href="#" class="btn-primary">Shop Now</a>
+    </div>
+  </div>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <p class="featured-banner-eyebrow">For The Modern Man</p>
+    <h2 class="newsletter-title">Stay <em>Ahead</em> of the Style Curve</h2>
+    <p class="newsletter-sub">Get men's fashion alerts, exclusive deals, and new arrivals straight to your inbox.</p>
+    <form class="newsletter-form" action="#" method="post">
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand footer-col">
+        <a href="index.html" class="logo"><span class="logo-symbol">♠</span><span class="logo-text">Shop
+            <span>Spade</span></span></a>
+        <p class="footer-tagline">Premium fashion for men, women, and children. Quality that speaks, style that lasts.
+        </p>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="5" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg></a>
+          <a href="#" class="social-icon" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg></a>
+          <a href="#" class="social-icon" aria-label="Twitter / X"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Men's Shop</h4>
+        <ul>
+          <li><a href="#">Clothing</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Wallets</a></li>
+          <li><a href="#">Bags</a></li>
+          <li><a href="#">Perfumes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="mens.html">Men's</a></li>
+          <li><a href="womens.html">Women's</a></li>
+          <li><a href="kids.html">Kids'</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Sale</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Shop Spade. All rights reserved.</p>
+      <p>Designed with ♠ in Chandigarh, India</p>
+      <p><a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
